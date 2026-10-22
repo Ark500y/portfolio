@@ -10,6 +10,9 @@ export const brand = {
   wordmark: 'ARK',
   role: 'Creative Engineer & Full-Stack Architect',
   email: 'ark203777@gmail.com',
+  phone: '+92 314 1495630',
+  phoneRaw: '+923141495630',
+  whatsapp: 'https://wa.me/923141495630',
 };
 
 export const nav = [

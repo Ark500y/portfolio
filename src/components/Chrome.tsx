@@ -49,6 +49,17 @@ export function Header() {
             {item.label}
           </a>
         ))}
+        <div className="mt-6 border-t border-white/10 pt-6 font-mono text-[0.75rem] space-y-3">
+          <a href={`mailto:${brand.email}`} className="block text-regolith/80 hover:text-white">
+            ✉ {brand.email}
+          </a>
+          <a href={`tel:${brand.phoneRaw}`} className="block text-regolith/80 hover:text-white">
+            📞 {brand.phone}
+          </a>
+          <a href={brand.whatsapp} target="_blank" rel="noreferrer" className="block text-[#25D366] hover:underline">
+            💬 WhatsApp: {brand.phone}
+          </a>
+        </div>
       </div>
     </header>
   );
@@ -57,13 +68,25 @@ export function Header() {
 export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-void px-4 py-8 sm:px-6 md:px-[6vw]">
-      <div className="flex flex-col gap-4 font-mono text-label text-regolith/50 uppercase md:flex-row md:items-center md:justify-between">
+      <div className="flex flex-col gap-6 font-mono text-label text-regolith/50 uppercase md:flex-row md:items-center md:justify-between">
         <span className="flex items-center gap-2.5 text-white/80">
           <Crescent className="size-4" />
           {brand.wordmark} · Creative Engineer & Systems Architect
         </span>
-        <span>© {new Date().getFullYear()} · Crafted by ARK</span>
-        <a href="#top" onClick={(e) => go(e)} className="hover:text-white">
+        <div className="flex flex-wrap items-center gap-4 text-regolith/75 normal-case">
+          <a href={`mailto:${brand.email}`} className="transition-colors hover:text-white">
+            {brand.email}
+          </a>
+          <span className="text-white/20">·</span>
+          <a href={`tel:${brand.phoneRaw}`} className="transition-colors hover:text-white">
+            {brand.phone}
+          </a>
+          <span className="text-white/20">·</span>
+          <a href={brand.whatsapp} target="_blank" rel="noreferrer" className="text-[#25D366] transition-colors hover:text-white">
+            WhatsApp
+          </a>
+        </div>
+        <a href="#top" onClick={(e) => go(e)} className="hover:text-white uppercase">
           Back to the surface ↑
         </a>
       </div>
