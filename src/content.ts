@@ -3,6 +3,8 @@
  * Blends lunar-grade precision, cinematic motion, and high-performance digital craft.
  */
 
+const b = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 export const brand = {
   name: 'ARK',
   wordmark: 'ARK',
@@ -34,25 +36,25 @@ export const log = [
     tag: 'Case 01',
     title: 'Nova Engine',
     body: 'Ultra-low latency telemetry and distributed compute engine built for real-time mission-critical applications.',
-    image: '/media/cards/m1-launch.webp',
+    image: `${b}/media/cards/m1-launch.webp`,
   },
   {
     tag: 'Case 02',
     title: 'Orbital Spatial UI',
     body: 'Next-generation web experience with GPU-accelerated shaders, smooth-scrolled physics, and tactile interaction.',
-    image: '/media/cards/m2-orbit.webp',
+    image: `${b}/media/cards/m2-orbit.webp`,
   },
   {
     tag: 'Case 03',
     title: 'Tranquillity Cloud',
     body: 'Autonomous edge infrastructure and fault-tolerant orchestration platform supporting 10M+ daily events.',
-    image: '/media/cards/m3-base.webp',
+    image: `${b}/media/cards/m3-base.webp`,
   },
   {
     tag: 'Case 04',
     title: 'Pioneer Protocol',
     body: 'Zero-knowledge verification and immutable registry architecture crafted with end-to-end cryptographic integrity.',
-    image: '/media/cards/m4-walk.webp',
+    image: `${b}/media/cards/m4-walk.webp`,
   },
 ];
 

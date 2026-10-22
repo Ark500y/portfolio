@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import {defineConfig} from 'vite';
 
 export default defineConfig({
+  base: process.env.GITHUB_PAGES === 'true' ? '/portfolio/' : '/',
   plugins: [react(), tailwindcss()],
   server: {
     host: '0.0.0.0',
@@ -10,7 +11,6 @@ export default defineConfig({
     allowedHosts: true,
   },
   build: {
-    // Frame sequence and loop video live in public/ and are served as-is.
     target: 'es2020',
   },
 });

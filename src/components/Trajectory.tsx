@@ -71,6 +71,7 @@ export function Trajectory() {
     });
   }, []);
 
+  const b = import.meta.env.BASE_URL.replace(/\/$/, '');
   const current = trajectory.legs[leg];
   const earthW = (EARTH.r * 2) / LAYER.d;
   const earthH = earthW * (1520 / 2688);
@@ -116,7 +117,7 @@ export function Trajectory() {
 
             <circle cx={EARTH.cx} cy={EARTH.cy} r={EARTH.r * 1.18} fill="url(#earth-glow)" />
             <image
-              href="/layers/m/earth.webp"
+              href={`${b}/layers/m/earth.webp`}
               x={EARTH.cx - LAYER.cx * earthW}
               y={EARTH.cy - LAYER.cy * earthH}
               width={earthW}

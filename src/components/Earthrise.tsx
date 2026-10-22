@@ -145,6 +145,8 @@ export function Earthrise() {
     });
   }, []);
 
+  const b = import.meta.env.BASE_URL.replace(/\/$/, '');
+
   const layer = (name: LayerName, extra = '') => (
     <div
       key={name}
@@ -154,8 +156,8 @@ export function Earthrise() {
       className={`absolute inset-0 will-change-transform ${extra}`}
     >
       <picture>
-        <source media="(max-width: 767px)" srcSet={`/layers/m/${name}.webp`} />
-        <img src={`/layers/d/${name}.webp`} alt="" aria-hidden="true" className={FIT} decoding="async" fetchPriority={name === 'sky' ? 'high' : 'auto'} />
+        <source media="(max-width: 767px)" srcSet={`${b}/layers/m/${name}.webp`} />
+        <img src={`${b}/layers/d/${name}.webp`} alt="" aria-hidden="true" className={FIT} decoding="async" fetchPriority={name === 'sky' ? 'high' : 'auto'} />
       </picture>
       {/* The ground carries a black apron below it, so when it climbs it
           fills the screen and hands straight over to the page below. */}
